@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .technology-body {
+    @apply h-fit  md:grid md:grid-cols-1 w-full py-3;
+    background-image: url("./img/techBg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .tech-div {
+    @apply w-full h-fit     px-[5%]  relative pb-2;
+  }
+  .technology-heading {
+    @apply relative flex justify-center;
+  }
+  .technology-heading > .span-one {
+    @apply text-white  text-xl md:text-5xl font-poppins font-extrabold mt-[20px] opacity-25 tracking-wider;
+  }
+  .technology-heading-two {
+    @apply md:text-4xl text-xl  absolute top-10   font-poppins font-extrabold text-inoa-red/90 md:top-24 tracking-wide;
+  }
+
+  .o {
+    @apply text-inoa-red text-3xl md:text-8xl opacity-100 animate-bounce inline-block;
+  }
+  .tech-center-div {
+    @apply mt-5 md:mt-10 w-full flex flex-col justify-center items-center pb-20;
+  }
+
+  .tech-para {
+    @apply text-base md:text-xl font-poppins text-neutral-600 font-extralight;
+  }
+  .tech-sub-heading {
+    @apply text-neutral-900 mt-5 md:text-xl font-poppins;
+  }
+  .tech-holder {
+    @apply w-full  lg:w-[50%] flex-wrap flex md:p-10 gap-5 justify-center items-center md:mb-20;
+  }
+  .tech-holder > div {
+    @apply w-[200px] h-[200px] relative  gap-3  shadow-md  bg-inoa-red font-poppins  p-5 tracking-wider rounded-md  flex  justify-center items-center text-white;
+    border-left: 0.5px solid rgb(168, 159, 159);
+  }
+
+  .tech-holder > div > button {
+    @apply text-[14px] md:text-base;
+  }
+
+  .tech-item {
+    @apply flex flex-col justify-center items-start text-sm;
+  }
+  .blober {
+    @apply bg-neutral-500 py-2 px-3 rounded-md;
+    animation: slider 2s;
+  }
+  @keyframes slider {
+    100% {
+      @apply bg-neutral-500/60;
+    }
+  }
+
+  /* ---------------------------master animaiton ------------------------------*/
+  .tech-overlay > div {
+    @apply h-[100px] w-[3px] bg-slate-300 blur-[3.5px]  opacity-90 hover:hidden;
+  }
+  .tech-overlay div:nth-child(1) {
+    animation: rainfall 1s infinite linear;
+  }
+  .tech-overlay div:nth-child(2) {
+    animation: rainfall 2.3s infinite linear;
+  }
+  .tech-overlay div:nth-child(3) {
+    animation: rainfall 1.4s infinite linear;
+  }
+  .tech-overlay div:nth-child(4) {
+    animation: rainfall 3.3s infinite linear;
+  }
+  .tech-overlay div:nth-child(5) {
+    animation: rainfall 1.4s infinite linear;
+  }
+  .tech-overlay div:nth-child(6) {
+    animation: rainfall 3.07s infinite linear;
+  }
+  .tech-overlay div:nth-child(7) {
+    animation: rainfall 1.07s infinite linear;
+  }
+  .tech-overlay div:nth-child(8) {
+    animation: rainfall 1.09s infinite linear;
+  }
+  .tech-overlay div:nth-child(9) {
+    animation: rainfall 5.1s infinite linear;
+  }
+  .tech-overlay div:nth-child(10) {
+    animation: rainfall 4.3s infinite linear;
+  }
+  .tech-overlay div:nth-child(11) {
+    animation: rainfall 5.4s infinite linear;
+  }
+  .tech-overlay div:nth-child(12) {
+    animation: rainfall 2.1s infinite linear;
+  }
+  .tech-overlay div:nth-child(13) {
+    animation: rainfall 4.3s infinite linear;
+  }
+  .tech-overlay div:nth-child(14) {
+    animation: rainfall 7.3s infinite linear;
+  }
+  .tech-overlay div:nth-child(15) {
+    animation: rainfall 4s infinite linear;
+  }
+  .tech-overlay div:nth-child(16) {
+    animation: rainfall 3s infinite linear;
+  }
+  .tech-overlay div:nth-child(17) {
+    animation: rainfall 6s infinite linear;
+  }
+  .tech-overlay div:nth-child(18) {
+    animation: rainfall 3s infinite linear;
+  }
+  .tech-overlay div:nth-child(19) {
+    animation: rainfall 2s infinite linear;
+  }
+  .tech-overlay div:nth-child(20) {
+    animation: rainfall 1s infinite linear;
+  }
+
+  @keyframes rainfall {
+    0% {
+      @apply opacity-5;
+      transform: translateY(0);
+    }
+
+    100% {
+      @apply opacity-50 bg-blue-700;
+      transform: translateY(100vh);
+    }
+  }
+
+  .tech-animator {
+    animation: bouncer 1s infinite alternate-reverse;
+  }
+  .tech-item {
+    @apply h-fit;
+  }
+}

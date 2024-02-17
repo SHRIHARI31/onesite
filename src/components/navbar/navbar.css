@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer componets {
+  .nav-bar > a {
+    @apply w-fit h-fit;
+  }
+
+  .nav-btn {
+    @apply hover:!text-inoa-red tracking-wide  !text-white relative;
+  }
+  .nav-btn {
+    transition: 0.2s ease-in-out;
+  }
+  .before.nav-btn::before {
+    @apply w-[100%] h-[3.5px] bg-inoa-red absolute   rounded-md bottom-0 left-0;
+  }
+
+  .before.nav-btn::before {
+    animation: skewer 0.4s ease-in-out;
+    content: " ";
+  }
+
+  .bar-1 {
+    @apply w-[80%];
+  }
+  .bar-1 {
+    transform: rotate(120deg);
+    transition: 0.4s ease-in-out;
+  }
+  .bar-2 {
+    @apply w-[80%];
+  }
+  .bar-2 {
+    transform: rotate(220deg) translateX(10px) translateY(5px);
+    transition: 0.5s ease-in-out;
+  }
+  .bar-3 {
+    display: none;
+    transition: 0.3s ease-in-out;
+  }
+
+  @keyframes skewer {
+    0% {
+      width: 0;
+      background-color: white;
+    }
+    0% {
+      width: 10%;
+      background-color: white;
+    }
+    50% {
+      width: 30%;
+      background-color: white;
+    }
+    70% {
+      width: 60%;
+      background-color: white;
+    }
+    80% {
+      width: 100%;
+      background-color: white;
+    }
+    100% {
+      width: 100%;
+      background-color: red;
+    }
+  }
+
+  /*drop down treatment*/
+  .link-holder a {
+    @apply relative;
+  }
+  .drop-down {
+    @apply flex-col  w-fit overflow-y-auto z-[2] absolute md:w-[300px] bg-black  md:top-20 md:bg-neutral-800/90 px-5 py-3 md:pt-9 rounded-md gap-5;
+  }
+  .drop-down::before {
+    @apply top-0  md:block absolute w-[10px] h-[40px] bg-inoa-red;
+  }
+
+  .drop-down::before {
+    content: "";
+    animation: ribbon 0.6s infinite alternate ease-in-out;
+  }
+
+  @keyframes ribbon {
+    0% {
+      height: 20px;
+    }
+    100% {
+      height: 50px;
+    }
+  }
+  .drop-down .drop-down-item {
+    @apply !text-slate-50  text-sm hover:bg-neutral-800 hover:!text-inoa-red px-3 py-2 rounded-md text-center  hover:font-semibold w-full tracking-wide;
+  }
+  .drop-down .drop-down-item {
+    transition: 0.1ms ease-in-out;
+  }
+  .nav-btn {
+    @apply cursor-pointer;
+  }
+  .marques::before {
+    @apply bg-inoa-red    animate-pulse rounded-full blur-sm left-0 bottom-[6px];
+  }
+  .marques::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    position: absolute;
+  }
+  .btn-span {
+    animation: blooms 1s infinite alternate ease-in-out;
+  }
+  @keyframes blooms {
+    100% {
+      filter: brightness(150%);
+    }
+  }
+}

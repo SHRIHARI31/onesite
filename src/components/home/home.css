@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .home-body {
+    @apply h-fit  lg:h-screen bg-white gap-40 px-[10%] font-poppins relative w-full py-10 lg:py-[10%]   md:flex
+     md:flex-row md:flex-wrap md:items-center overflow-hidden;
+    background-image: url("./img/home-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .home-overlay {
+    @apply absolute    left-0  top-0 w-full h-full flex justify-start  flex-wrap  gap-[100px];
+  }
+
+  .home-overlay div:nth-child(1) {
+    animation: snowfall 7.16s infinite;
+  }
+  .home-overlay div:nth-child(2) {
+    animation: snowfall 6s infinite;
+  }
+  .home-overlay div:nth-child(3) {
+    animation: snowfall 9.5s infinite;
+  }
+  .home-overlay div:nth-child(4) {
+    animation: snowfall 4s infinite;
+  }
+  .home-overlay div:nth-child(5) {
+    animation: snowfall 8.3s infinite;
+  }
+  .home-overlay div:nth-child(6) {
+    animation: snowfall 9.4s infinite;
+  }
+  .home-overlay div:nth-child(7) {
+    animation: snowfall 5.5s infinite;
+  }
+  .home-overlay div:nth-child(8) {
+    animation: snowfall 7.2s infinite;
+  }
+
+  @keyframes snowfall {
+    0% {
+      @apply opacity-5;
+      transform: translateY(10);
+    }
+    10% {
+      @apply opacity-30;
+    }
+    40% {
+      @apply opacity-70;
+    }
+    60% {
+      @apply opacity-20;
+    }
+    70% {
+      @apply opacity-25;
+    }
+    80% {
+      @apply opacity-20;
+    }
+
+    100% {
+      @apply opacity-0;
+      transform: translateY(100vh) rotate(100deg);
+    }
+  }
+  .home-overlay > div {
+    @apply w-[45px] h-[45px] opacity-40  rounded-full hover:scale-105;
+    background-image: url("./anim/svg//leaves-svgrepo-com.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    animation-delay: 0.2s;
+  }
+  .header-content {
+    @apply flex  flex-col  justify-center   md:flex md:items-start   md:w-[50%];
+  }
+  .header-heading {
+    @apply text-sm  capitalize text-red-500 font-bold py-4   md:text-3xl text-left inline-block z-[2];
+    word-spacing: 5px;
+  }
+
+  .home-anim-content {
+    @apply max-sm:right-3 max-sm:w-[200px]  rounded-full max-sm:bottom-0 md:block  p-5 md:w-[300px] lg:w-[500px]  absolute md:right-4 lg:right-16;
+  }
+}

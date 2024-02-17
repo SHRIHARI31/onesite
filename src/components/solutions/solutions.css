@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .solution-body {
+    @apply h-fit md:h-fit bg-slate-50 lg:grid lg:grid-cols-1 pb-[5%] pt-[5%] relative  font-poppins mt-2;
+    background-image: url("./img/handShake.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .solution-overlay {
+    @apply flex px-[] justify-between;
+  }
+
+  /* -----------------------------------------animation --------------------------starts*/
+  .solution-overlay div:nth-child(1) {
+    animation: bandfall 5s 1s infinite linear;
+  }
+  .solution-overlay div:nth-child(2) {
+    animation: bandfall 6.1s 1s infinite linear;
+  }
+  .solution-overlay div:nth-child(3) {
+    animation: bandfall 6.3s infinite linear;
+  }
+  .solution-overlay div:nth-child(4) {
+    animation: bandfall 7s infinite linear;
+  }
+  .solution-overlay div:nth-child(5) {
+    animation: bandfall 6s infinite linear;
+  }
+  .solution-overlay div:nth-child(6) {
+    animation: bandfall 5s infinite linear;
+  }
+  .solution-overlay div:nth-child(7) {
+    animation: bandfall 10s infinite linear;
+  }
+  .solution-overlay div:nth-child(8) {
+    animation: bandfall 8s infinite linear;
+  }
+  .solution-overlay div:nth-child(9) {
+    animation: bandfall 5s infinite linear;
+  }
+  .solution-overlay div:nth-child(10) {
+    animation: bandfall 8s infinite linear;
+  }
+
+  @keyframes bandfall {
+    0% {
+      @apply opacity-5;
+      transform: translateY(0);
+    }
+    10% {
+      @apply opacity-30 bg-yellow-400;
+    }
+    40% {
+      @apply opacity-70 bg-inoa-red;
+    }
+    60% {
+      @apply opacity-90 bg-violet-500;
+    }
+    70% {
+      @apply bg-white;
+    }
+    80% {
+      @apply bg-white;
+    }
+    90% {
+      @apply bg-green-500;
+    }
+    100% {
+      @apply opacity-100 bg-green-500;
+      transform: translateY(100vh) rotate(360deg) scale(1.03);
+    }
+  }
+  .solution-overlay > div {
+    @apply w-[5px] h-[40px] opacity-40 bg-blue-400;
+  }
+
+  /* -----------------------------------------animation ---------------------------------------end----------------------*/
+
+  /*--------------solution-items--------------*/
+  .solution-content-section {
+    @apply h-fit md:h-fit relative px-[5%] flex flex-col  py-5;
+  }
+
+  @keyframes opacer {
+    100% {
+      opacity: 0.5;
+      transform: translateY(15px);
+    }
+  }
+  .solution-content-holder {
+    @apply flex flex-col justify-center items-center gap-5 z-[1];
+  }
+  .solution-heading {
+    @apply text-2xl md:text-5xl text-inoa-red     justify-center items-center  tracking-wide;
+  }
+  .solution-sub-heading {
+    @apply text-lg   md:text-xl justify-center items-center;
+  }
+  .solution-para {
+    @apply text-neutral-500 pb-10  text-sm md:text-xl;
+  }
+  .solution-items {
+    @apply flex h-fit  flex-wrap gap-5 justify-center items-center lg:w-[60%] z-[1];
+  }
+  .solution-items > li {
+    @apply w-full md:w-[250px] h-[100px]   bg-inoa-red  flex  justify-center items-center
+     max-sm:text-sm text-center     text-white tracking-wide rounded-md  active:scale-105;
+    transition: 0.3s;
+
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  }
+  .hover-lg:hover {
+    transform: translateY(-5px);
+  }
+  .absolute-div {
+    @apply relative;
+  }
+  .absolute-heading {
+    @apply absolute bottom-6 opacity-10 font-extrabold tracking-widest  right-[-10.5px];
+  }
+}

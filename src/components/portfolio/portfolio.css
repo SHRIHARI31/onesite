@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .portfolio-body > div {
+    @apply w-full;
+  }
+  .portfolio-body {
+    @apply h-fit pt-[5%] pb-2  bg-black flex flex-col font-poppins  w-full px-[5%];
+  }
+  .portfolio-nav {
+    @apply md:flex flex-col md:flex-row lg:justify-between;
+  }
+  .portfolio-heading {
+    @apply font-semibold tracking-wide text-lg md:text-xl lg:text-3xl text-white lg:mb-5;
+  }
+  .navigation {
+    @apply flex w-fit flex-wrap rounded-md  flex-row overflow-x-scroll mb-5  gap-3  md:flex-row  justify-center items-center lg:gap-8;
+  }
+  .nav-item {
+    @apply w-fit;
+  }
+  .nav-item > button {
+    @apply text-white tracking-wide w-fit capitalize text-sm lg:text-xl cursor-pointer;
+  }
+
+  .portfolio-segment-body {
+    @apply flex flex-col sticky  h-fit  lg:overflow-y-scroll     scroll-smooth     shadow-white rounded-md gap-y-20;
+  }
+
+  .Achievements {
+    @apply flex flex-wrap justify-center h-fit  items-center;
+  }
+  .cards-holder {
+    @apply flex flex-wrap justify-center items-center gap-x-36 gap-y-5 mt-[50px] h-full;
+  }
+
+  /*-----------concentrate card--------------- */
+  .cards {
+    @apply max-sm:w-fit hover:bg-neutral-700 w-[300px] h-fit md:h-[300px]  overflow-y-auto bg-neutral-600 rounded-lg flex flex-col justify-between 
+     items-center gap-2 py-5  px-4 cursor-pointer hover:scale-105 transition-all 
+    ease-in-out duration-150;
+  }
+  .title-svg {
+    @apply w-[70px] bg-inoa-red rounded-md py-2 px-1;
+    animation: bounceing 3s infinite alternate;
+    border: 1px outset black;
+  }
+  @keyframes bounceing {
+    100% {
+      transform: translateY(10px);
+    }
+  }
+  .title-heading {
+    @apply text-white text-center;
+  }
+  .title-para {
+    @apply text-center max-sm:h-fit  text-sm text-neutral-300 leading-6;
+  }
+  .blog-btn {
+    @apply text-white capitalize;
+  }
+  .wrapper {
+    @apply bg-inoa-red/90 text-white py-2 px-2 md:py-3 md:px-4 rounded-md;
+    animation: wrapy-slider 0.5s;
+  }
+  @keyframes wrapy-slider {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+  }
+  .skewer {
+    animation: skwing 0.5s ease-in-out alternate;
+  }
+  @keyframes skwing {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+      transform: translateY(-50px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}

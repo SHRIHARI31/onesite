@@ -1,0 +1,16 @@
+.blog-header {
+  background-image: url("./img/black.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.blog-header-overlay {
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.184),
+    black,
+    rgba(0, 0, 0, 0.297)
+  );
+}

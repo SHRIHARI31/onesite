@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .industire-body > div {
+    @apply w-full;
+  }
+  .industire-body {
+    @apply h-fit   flex  flex-wrap  bg-blue-50 w-full pt-10 px-[5%] py-5 font-poppins lg:grid lg:grid-cols-1 md:gap-5 relative;
+    background-image: url("./img/blocks.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .industire-topic {
+    @apply w-full flex flex-col  justify-center items-center pt-[10%] gap-5;
+  }
+
+  .industire-topic-heading {
+    @apply text-inoa-red font-bold text-2xl lg:text-5xl tracking-wider z-[2];
+  }
+  .industire-sub-heading {
+    @apply text-sm  md:text-lg z-[1];
+    word-spacing: 5px;
+  }
+  .industire-para {
+    @apply max-sm:text-sm text-white z-[1];
+    word-spacing: 3px;
+  }
+  .in-img {
+    @apply w-[50px] h-[50px] md:w-[100px] md:h-[100px];
+  }
+  .industiri-images {
+    @apply pt-[5%]  flex flex-wrap justify-center items-center   w-full lg:w-[50%];
+  }
+  .industiri-images > div {
+    @apply flex flex-col justify-center items-center gap-3   bg-inoa-red  max-sm:w-[200px] md:w-[200px]  m-2 md:h-[200px]   z-[1] px-3 py-4  
+    md:hover:translate-y-[-10px]  md:hover:rotate-2  rounded-md   ease-in-out  duration-300;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  }
+  /*--------------------------------master------------------animation-------------------*/
+  .industiri-images > div > div {
+    @apply text-white font-extralight md:text-lg tracking-wider;
+  }
+  .maps {
+    animation: bouncer 1s infinite alternate-reverse;
+  }
+  @keyframes bouncer {
+    0% {
+      opacity: 0.5;
+      transform: translateY(40px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}

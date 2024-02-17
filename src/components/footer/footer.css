@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .footer-body {
+    @apply h-fit bg-neutral-800 relative w-full font-poppins flex  overflow-hidden justify-center px-[2%] top-0;
+  }
+}

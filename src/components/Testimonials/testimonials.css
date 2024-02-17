@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .testimonial-div > div {
+    @apply w-full font-poppins;
+  }
+  .testimonial-div {
+    @apply w-full h-fit flex-wrap px-5 md:px-10 lg:py-10  flex justify-center items-center  overflow-x-hidden  md:flex-col;
+    background-image: url("./img/testi.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .heading-div {
+    @apply flex  justify-around items-center flex-row mt-2;
+  }
+
+  .test-section-one,
+  .test-section-two {
+    @apply md:w-[50%];
+  }
+  .test-section-one {
+    @apply flex flex-col justify-center px-3 md:px-10   rounded-md  md:bg-transparent  md:gap-5;
+  }
+
+  @keyframes bomb {
+    0% {
+      @apply opacity-65  bg-blue-100 backdrop-blur-sm shadow-md;
+    }
+  }
+
+  .secondary-heading-name {
+    @apply text-2xl uppercase text-start font-semibold;
+  }
+  .position {
+    @apply text-sm text-start !text-neutral-50/80;
+  }
+  .blurry {
+    @apply bg-black/20 w-full   md:h-[128px] absolute bottom-0  z-0  backdrop-blur-3xl opacity-90   border-black/20 border-t-[.5px];
+    filter: blur(2px);
+  }
+  .person-img {
+    @apply absolute w-[120px] md:left-[10%] md:right-[10%]  md:w-[400px]  bottom-0;
+  }
+  .button-div-slider > button:active {
+    transform: scale(1.2);
+  }
+  .button-div-slider > button {
+    @apply active:scale-105;
+    transition: 0.8ms ease-in-out;
+  }
+  @keyframes zoomer {
+    100% {
+      @apply bg-blue-400/50;
+    }
+  }
+  .button-div-slider > button > img {
+    animation: zoomer 1s infinite alternate;
+  }
+  .button-div-slider > button > img:hover {
+    @apply bg-blue-400;
+  }
+
+  .targeted {
+    transition: 0.3s ease-in-out;
+  }
+  @keyframes slide {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  .testimonial-slider {
+    display: flex;
+    animation: slide 10s infinite;
+  }
+  .testimonial {
+    width: 100%;
+    padding: 1rem;
+  }
+  .stars {
+    font-size: 1.5rem;
+    color: #ffd700;
+    margin-bottom: 0.5rem;
+  }
+  .comment {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  .name {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  /* Responsive classes */
+  @media (min-width: 768px) {
+    .testimonial-slider {
+      animation: slide 15s infinite;
+    }
+  }
+  @media (min-width: 1024px) {
+    .testimonial-slider {
+      animation: slide 20s infinite;
+    }
+  }
+}

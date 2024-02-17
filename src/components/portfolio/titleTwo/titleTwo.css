@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .title-two {
+    @apply h-fit;
+  }
+  .why-we-heading {
+    @apply text-white text-xl md:text-2xl lg:text-4xl text-center;
+  }
+  .why-we-body {
+    @apply py-10  gap-10;
+  }
+  .why-we-defenition {
+    @apply py-5  flex flex-col bg-neutral-500 rounded-md;
+  }
+  .defenetion-heading {
+    @apply text-center text-base md:text-xl  tracking-[10px] text-white;
+  }
+  .why-we-para {
+    @apply !text-neutral-700 w-[300px] text-base  md:w-[50%] tracking-wide md:text-lg;
+    letter-spacing: 1px;
+  }
+  .def-body {
+    @apply flex flex-wrap justify-around items-center  rounded-md p-3;
+  }
+  .def-body > img {
+    @apply lg:block lg:w-[30%];
+    animation: bouncer 3s infinite alternate-reverse;
+  }
+  .why-we-para {
+    @apply p-5 bg-slate-300 rounded-md relative;
+  }
+  .why-we-para:before {
+    content: "";
+    position: absolute;
+    animation: zooming 2s infinite alternate-reverse;
+    @apply bg-inoa-red/80 top-0  w-[20px] h-[20px] left-0 rotate-90  rounded-sm;
+  }
+  .why-we-para:after {
+    content: "";
+    position: absolute;
+    animation: zooming 2s infinite alternate-reverse;
+    @apply bg-inoa-red/80  rotate-90 right-0 bottom-0  w-[20px] h-[20px] rounded-sm;
+  }
+  @keyframes zooming {
+    10% {
+      transform: rotate(40deg);
+    }
+    50% {
+      transform: rotate(90deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

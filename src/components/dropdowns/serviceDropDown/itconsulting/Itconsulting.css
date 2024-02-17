@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .consulting-abouts{
+        @apply  w-full flex justify-center items-center;
+    }
+}

@@ -1,0 +1,5 @@
+*::-webkit-scrollbar {
+  overflow: auto;
+  display: none;
+  scroll-behavior: smooth;
+}

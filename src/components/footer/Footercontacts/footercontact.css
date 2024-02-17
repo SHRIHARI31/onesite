@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .contact-us {
+    @apply  bg-white/95 h-fit md:h-fit text-black    w-full max-sm:px-0  backdrop-blur-sm    rounded-md p-6 flex justify-end 
+     items-center md:w-[60%];
+  }
+  .contact-heading {
+    @apply sm:text-lg md:text-3xl lg:text-5xl font-bold font-poppins px-4 text-inoa-red text-center;
+  }
+  .contact-para {
+    @apply sm:text-sm md:text-xl   font-poppins px-4;
+  }
+  .contact-body {
+    @apply flex flex-col gap-10 w-full;
+  }
+  .contact-form {
+    @apply flex flex-col gap-2 justify-center items-center w-full px-4;
+  }
+  .input-getter {
+    @apply outline-none shadow-inner shadow-neutral-700/50 focus:shadow-md    bg-white/90 pb-4 placeholder:text-neutral-500 rounded-md px-2 py-3;
+    border-bottom: 1px solid rgb(114, 111, 111);
+  }
+  .comment-getter {
+    @apply placeholder:text-neutral-500 focus:shadow-md    shadow-inner shadow-neutral-700/50 rounded-md px-2 py-3 outline-none box-border w-full;
+    border-bottom: 1px solid rgb(114, 111, 111);
+  }
+  .input-div {
+    @apply w-full h-fit;
+  }
+  .button-div {
+    @apply w-full justify-center items-center flex;
+  }
+  .input-getter {
+    @apply w-full;
+  }
+}

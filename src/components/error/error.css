@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .error-body {
+    @apply h-fit p-[10%]   w-full font-poppins flex justify-center items-center;
+  }
+}

@@ -1,0 +1,15 @@
+.about-us-body {
+  background-image: url('./img/books.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.svg-div {
+  animation: globe 1s infinite alternate;
+}
+@keyframes globe {
+  100% {
+    transform: translateY(30px);
+  }
+}

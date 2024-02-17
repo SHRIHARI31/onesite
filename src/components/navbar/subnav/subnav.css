@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+
+  /*common*/
+ 
+  
+  /* This is the scrollbar track */
+::-webkit-scrollbar {
+    @apply hidden
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    @apply hidden
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    @apply hidden
+}
+
+  
+}

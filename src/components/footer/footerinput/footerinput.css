@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .footer-input-body {
+    @apply w-full h-fit  py-20 bg-neutral-800  max-sm:gap-20  px-[10%] md:pb-0  justify-center items-center flex  flex-wrap   gap-5  md:grid md:grid-cols-3;
+  }
+  .it-img {
+    @apply h-[100px] w-[100px] md:h-[150px] md:w-[150px] lg:h-[150px] lg:w-[150px] inline;
+  }
+
+  .floating {
+    animation: float 2s ease-in-out infinite;
+  }
+
+  .company-address {
+    @apply inline;
+  }
+  .address-heading {
+    @apply text-inoa-red font-extrabold font-poppins tracking-wide text-3xl  text-center;
+  }
+  .company-address {
+    @apply text-slate-200;
+  }
+  .input-div {
+    @apply flex flex-col gap-3;
+  }
+  .news-letter-heading {
+    @apply font-poppins tracking-wider text-slate-200;
+  }
+  .input-section {
+    @apply flex  justify-between  gap-2 relative   bg-slate-200 rounded-md w-full pr-3;
+  }
+  .input-footer-input {
+    @apply outline-none rounded-md pl-2 bg-inoa-red py-2 placeholder:text-slate-200 text-slate-200 relative w-[100%];
+  }
+
+  .click-btn-img {
+    @apply h-[30px]   hover:translate-x-1 cursor-pointer;
+  }
+}

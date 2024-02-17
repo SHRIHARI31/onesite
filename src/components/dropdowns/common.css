@@ -1,0 +1,30 @@
+.svg-section {
+  animation: bounceing 2s infinite alternate;
+}
+.drop-sec {
+  background-image: ("./img/smallwave.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.drop-sec:before {
+  content: "";
+  position: absolute;
+  animation: zooming 2s infinite alternate-reverse;
+  @apply bg-inoa-red/80 top-0  w-[20px] h-[20px] left-0 rotate-90  rounded-sm;
+}
+.drop-sec:after {
+  content: "";
+  position: absolute;
+  animation: zooming 2s infinite alternate-reverse;
+  @apply bg-inoa-red/80  rotate-90 right-0 bottom-0  w-[20px] h-[20px] rounded-sm;
+}
+.drop-down-body {
+  background-image: url("./img/office.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
